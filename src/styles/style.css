@@ -2,33 +2,36 @@
   padding: 0;
   margin: 0;
 }
- .to-do-list {
+
+.to-do-list {
   margin: 12rem 19rem;
-  border: 1px solid grey;
+  border: 1px solid blue;
   border-radius: 12px;
- }
+}
 
 .to-do-title,
 .response {
-display: flex;
-align-items: center;
-justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .to-do-title h1 {
-font-size: 25px;
-padding-top: 2%;
-padding-left: 2%;
+  font-size: 25px;
+  padding-top: 2%;
+  padding-left: 2%;
 }
 
 .reload {
   font-size: 160%;
 }
+
 .reload,
 .enter-input {
   cursor: pointer;
 }
-.response ,
+
+.response,
 .toDo-list {
   border-bottom: 1px solid grey;
   padding: 21px 20px;
@@ -45,8 +48,8 @@ padding-left: 2%;
 
 .button,
 .to-do-title {
- padding: 1rem;
- background-color: rgb(225, 218, 218, 0.952);
+  padding: 1rem;
+  background-color: rgb(225, 218, 218, 0.952);
 }
 
 .btn {
@@ -56,7 +59,7 @@ padding-left: 2%;
   font-size: 0.8rem;
   cursor: pointer;
 }
- 
+
 .to-do-response {
   width: 50%;
   border: white;

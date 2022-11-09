@@ -11,12 +11,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  module: {
-    rules: [{ test: /\.txt$/, use: 'raw-loader' }],
-  },
-  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
-  
-  devtool: 'inline-source-map',
   devServer: {
     static: './dist',
     open: true,
@@ -28,15 +22,7 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
-  },
-  optimization: {
-    runtimeChunk: 'single',
-  },
- 
+
   module: {
     rules: [
       {
@@ -46,4 +32,3 @@ module.exports = {
     ],
   },
 };
- 
