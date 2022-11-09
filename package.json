@@ -103,5 +103,8 @@
   "bugs": {
     "url": "https://github.com/Ibtisam34/To-do-list/issues"
   },
-  "homepage": "https://github.com/Ibtisam34/To-do-list#readme"
+  "homepage": "https://github.com/Ibtisam34/To-do-list#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0"
+  }
 }
