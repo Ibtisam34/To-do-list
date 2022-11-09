@@ -2,10 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List-structure</title>
-<script defer src="main.bundle.js"></script></head>
+    <title>To Do list</title>
+<script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
 <body>
-    <h1>To do list</h1>
+    <div class="to-do-list">
+    <div class="to-do-title">Today's To Do</div>
+    <ul class="response">
+        <input type="text" class="to-do-response" placeholder="Add to your list">
+    </ul>
+    <div id="todo-list"></div>
+    <div class="to-do"></div>
+    <div class="button">
+        <button type="reset" class="btn">Clear all completed</button>
+    </div>
+    </div>
 </body>
 </html>

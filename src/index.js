@@ -1,11 +1,14 @@
-import _ from 'lodash';
-function component() {
-  const element = document.createElement('div');
+import toDos from "./src/modules/items.js";
+import './styles/style.css';
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const toDosDiv = document.getElementById('todo-list');
+const toDosLists = (myToDos) =>
+<div class = "toDo-list">
+  <ul>
+   <input type="checkbox">
+    <span>${myToDos.description}</span>
+  </ul>
+</div>
 
-  return element;
-}
-
-document.body.appendChild(component());
+toDosDiv.innerHTML = `
+${toDos.map(toDosLists).join('')}`;

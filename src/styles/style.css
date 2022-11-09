@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+ .to-do-list {
+  margin: 12rem 19rem;
+  border: 1px solid grey;
+  border-radius: 12px;
+ }
+
+.to-do-title,
+.response {
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.to-do-title h1 {
+font-size: 25px;
+padding-top: 2%;
+padding-left: 2%;
+}
+
+.reload {
+  font-size: 160%;
+}
+.reload,
+.enter-input {
+  cursor: pointer;
+}
+.response ,
+.toDo-list {
+  border-bottom: 1px solid grey;
+  padding: 21px 20px;
+}
+
+.to-do-title {
+  border-bottom: 3px solid grey;
+}
+
+.button {
+  border-top: 3px solid grey;
+  text-align: center;
+}
+
+.button,
+.to-do-title {
+ padding: 1rem;
+ background-color: rgb(225, 218, 218, 0.952);
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+ 
+.to-do-response {
+  width: 50%;
+  border: white;
+}
+
+.to-do-response:active {
+  border: none;
+}
