@@ -1,0 +1,23 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "Its a  my first page of CAPSTONE PROJECT as per the requirements of the project. It is designed using HTML and CSS  & JAVASCRIPT.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ibtisam34/To-do-list.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ibtisam34/To-do-list/issues"
+  },
+  "homepage": "https://github.com/Ibtisam34/To-do-list#readme",
+  "devDependencies": {
+    "hint": "^7.1.3"
+  }
+}
