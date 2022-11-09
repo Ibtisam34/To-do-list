@@ -3,7 +3,7 @@
 
 
 
-Its a  my first page of CAPSTONE PROJECT as per the requirements of the project. It is designed using HTML and CSS  & JAVASCRIPT.
+Its a  my first page of list  PROJECT as per the requirements of the project. It is designed using HTML and CSS  & JAVASCRIPT.
 
 ## Built With
 
