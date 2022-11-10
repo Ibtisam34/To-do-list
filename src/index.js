@@ -1,12 +1,9 @@
-import toDos from './modules/items.js';
 import './styles/style.css';
+import UI  from './modules/ui.js'
+import Todo from './modules/todo.js';
 
-const toDosDiv = document.getElementById('todo-list');
-const toDosLists = (myToDos) => <div class = "toDo-list">
-  <ul>
-   <input type="checkbox"></input>
-    <span>${myToDos.description}</span>
-  </ul>
-</div>;
-toDosDiv.innerHTML = `
-${toDos.map(toDosLists).join('')}`;
+document.addEventListener(
+  'DOMContentLoaded',UI.displayTodo);
+  const bOOK = New Todo(desc,completed,id);
+  UI.addBookTolist(todo);
+
