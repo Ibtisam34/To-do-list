@@ -1,5 +1,5 @@
 const UI = {
-  static displayTodo() {
+ displayTodo() {
     const toDos = [
     {
     desc: 'cook breakfast',
@@ -20,9 +20,9 @@ const UI = {
 ];
 
 storedTodo.forEach((todo) => UI.addBookTolist(todo));
-}
+},
 
-static addBookTolist(todo){
+ static addBookTolist(todo){
   const list = document.querySelector(.response)
   list.innerHTML += `<li class="to-do-li">
   <div class='todo-div'>
