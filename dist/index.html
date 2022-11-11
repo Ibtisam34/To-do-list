@@ -1,1 +1,22 @@
-<html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>To Do list</title><script defer="defer" src="runtime.js"></script><script defer="defer" src="main.js"></script></head><div class="to-do-list"><div class="to-do-title"><h1>Today's To do</h1><span class="reload">&#x21bb;</span></div><ul class="response"><input class="to-do-response" placeholder="Add to your list"> <span class="enter-input">&#x2714;</span></ul><div id="todo-list"></div><div class="to-do"></div><div class="button"><button type="reset" class="btn">Clear all completed</button></div></div></html>
+<html>
+<head>
+          <title>list-to-do</title>
+<script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="index.js" type="module"></script>
+<body>
+     <div class="to-do-box">
+        <div class="todays-to-do"><p>Today's To Do</p><i class="fa-solid fa-arrows-rotate"></i></div>
+        <form class="add-to-list" id="add-to-list">
+            <input type="text" name="task" id="task" placeholder="Add to list..." required>
+            <button type="submit" class="btn-add-task">
+                <i class="fa fa-plus"></i>
+            </button>
+        </form>
+        <ul id="to-do-list" class="to-do-list">
+        </ul>
+        <button class="btn-clear">Clear all completed</button>
+    </div>
+</body>
+</html>
