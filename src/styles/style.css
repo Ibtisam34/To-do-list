@@ -1,70 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Poppins&family=Roboto&display=swap');
+
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.todo {
-  margin: 12rem 19rem;
-  border: 1px solid grey;
-  border-radius: 12px;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(250, 244, 244);
 }
 
-.to-do-title,
-.response {
+.to-do {
+  width: 40%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.todays-to-do {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-list {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-list input {
+  font-style: italic;
+  width: 500%;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.btn-clear {
+  display: block;
+  margin-top: auto;
+  border: 1px solid #ccc;
+  padding: 15px 0;
+  color: rgb(138, 133, 133);
+  font-size: 1rem;
+}
+
+.add-task {
+  border: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.do-list {
+  list-style-type: none;
+}
+
+.do-list li {
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.to-do-title h1 {
-  font-size: 25px;
-  padding-top: 2%;
-  padding-left: 2%;
-}
-
-.reload {
-  font-size: 160%;
-}
-
-.reload,
-.enter-input {
-  cursor: pointer;
-}
-
-.response,
-.toDo-list {
-  border-bottom: 1px solid grey;
-  padding: 21px 20px;
-}
-
-.to-do-title {
-  border-bottom: 3px solid grey;
-}
-
-.button {
-  border-top: 3px solid grey;
-  text-align: center;
-}
-
-.button,
-.to-do-title {
-  padding: 1rem;
-  background-color: rgb(225, 218, 218, 0.952);
-}
-
-.btn {
+.task-description {
+  border: none;
   outline: none;
-  border: none;
-  background-color: transparent;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.check,
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.edit,
+.del {
   cursor: pointer;
-}
-
-.to-do-response {
-  width: 50%;
-  border: white;
-}
-
-.to-do-response:active {
-  border: none;
 }
