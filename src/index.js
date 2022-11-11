@@ -43,7 +43,6 @@ btnClear.addEventListener('click', () => {
     updatedList += displayTask(task);
   });
   lists.innerHTML = updatedList;
-  lists.innerHTML = updatedList;
   localStorage.setItem('tasks', JSON.stringify(filterTasks));
 });
 
