@@ -10,7 +10,9 @@ Its a  my first page of to-do-list PROJECT as per the requirements of the projec
 html, css & javascript
 
 To get a local copy up and running follow these simple example steps.
-Clone the repo named "portfolio"
+Clone the repo named "to-do-list"
+run npm start to go live
+
 
 ## Authors
 
