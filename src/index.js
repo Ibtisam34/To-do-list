@@ -1,9 +1,9 @@
 import './styles/style.css';
 
-import updateTaskStatus from './models/task.js';
+import updateTaskStatus from './modules/task.js';
 import {
   displayTask, addTask, deleteTask, lists,
-} from './models/all.js';
+} from './modules/all.js';
 
 const form = document.getElementById('add-to-list');
 const btnClear = document.querySelector('.btn-clear');
@@ -42,6 +42,7 @@ btnClear.addEventListener('click', () => {
   filterTasks.forEach((task) => {
     updatedList += displayTask(task);
   });
+  lists.innerHTML = updatedList;
   lists.innerHTML = updatedList;
   localStorage.setItem('tasks', JSON.stringify(filterTasks));
 });
