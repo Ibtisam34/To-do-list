@@ -3,7 +3,7 @@
 # to-do-list
 
 
-Its a  my first page of to-do-list PROJECT as per the requirements of the project. It is designed using HTML and CSS  & JAVASCRIPT & webpack
+In this project, I built a simple HTML list of To-Do tasks. I  built it using HTML, CSS, JavaScript, and webpack and served it by a webpack dev server.
 
 ## Built With
 
