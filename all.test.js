@@ -1,8 +1,7 @@
 /**
  * @jest-environment jsdom
  */
-import { addTask, taskArr } from './src/modules/all.js';
-import deleteTask from './src/modules/remove.js';
+import { addTask, taskArr, deleteTask } from './src/modules/all.js';
 
 describe('Add and Remove data', () => {
   test('New item added', () => {
