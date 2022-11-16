@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "jest",
+    "testAll": "jest --watch",
     "start": "webpack serve --open",
     "server": "node server.js",
     "build": "webpack",
