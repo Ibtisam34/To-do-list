@@ -1,4 +1,5 @@
-import './styles/style.css';
+// eslint-disable-next-line import/extensions, import/no-unresolved
+import './src/styles/style.css';
 
 import updateTaskStatus from './modules/task.js';
 import {
