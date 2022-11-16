@@ -5,6 +5,7 @@ module.exports = {
   mode: 'development',
   entry: {
     main: path.resolve(__dirname, './src/index.js'),
+    static: './dist',
   },
   output: {
     filename: '[name].bundle.js',
