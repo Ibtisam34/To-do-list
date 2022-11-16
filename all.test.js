@@ -11,7 +11,7 @@ describe('Add and Remove data', () => {
       description: 'Read book',
       completed: false,
     });
-    expect(taskArr).toHaveLength(0);
+    expect(taskArr).toHaveLength(1);
   });
 
   test('New Task Deleted', () => {
@@ -21,6 +21,6 @@ describe('Add and Remove data', () => {
       deleteTask(task, e.target);
     };
 
-    expect(taskArr).toHaveLength(0);
+    expect(taskArr).toHaveLength(1);
   });
 });

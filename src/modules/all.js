@@ -1,7 +1,8 @@
+const { addTask, loadList } = require('./TaskCRUD.js');
 import deleteTask from './remove.js';
 
-const lists = document.getElementById('to-do-list');
 const taskArr = [];
+const lists = document.getElementById('to-do-list');
 
 // display task
 const displayTask = (task) => {
@@ -31,24 +32,12 @@ window.addEventListener('DOMContentLoaded', () => {
   for (let i = 0; i < completedTasksIndex.length; i += 1) {
     for (let j = 0; j < (lists.children).length; j += 1) {
       if (j === (completedTasksIndex[i].index - 1)) {
-        lists.children[j].children[0].children[0].checked = true;
+       lists.children[j].children[0].children[0].checked = true;
       }
-    }
+   }
   }
 });
 
-// adding taks
-const addTask = (task) => {
-  const taskObj = {};
-  taskObj.index = taskArr.length + 1;
-  taskObj.description = task;
-  taskObj.completed = false;
-  const listItem = displayTask(taskObj);
-  lists.insertAdjacentHTML('beforeend', listItem);
-  taskArr.push(taskObj);
-  localStorage.setItem('tasks', JSON.stringify(taskArr));
-};
-
 export {
-  displayTask, addTask, deleteTask, lists, taskArr,
+  lists, taskArr, displayTask, loadList, addTask, deleteTask
 };
