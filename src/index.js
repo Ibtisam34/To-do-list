@@ -5,7 +5,7 @@ import editTask from './modules/edit.js';
 import {
   displayTask, loadList, deleteTask, lists,
 } from './modules/all.js';
-import { setItem } from './modules/local';
+import { setItem } from './modules/local.js';
 
 const form = document.getElementById('add-to-list');
 const btnClear = document.querySelector('.btn-clear');

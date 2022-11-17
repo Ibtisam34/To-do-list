@@ -1,6 +1,6 @@
-import { saveToStorage } from './storage.js';
+import saveToStorage from './storage.js';
 
-const fakeLocalStorage = (function () {
+const fakeLocalStorage = (() => {
   let store = {};
 
   return {
@@ -17,7 +17,7 @@ const fakeLocalStorage = (function () {
       store = {};
     },
   };
-}());
+});
 
 describe('storage', () => {
   beforeAll(() => {

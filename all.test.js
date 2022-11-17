@@ -3,7 +3,7 @@
  */
 import { deleteTask } from './src/modules/all.js';
 import { addTask } from './src/modules/TaskCRUD.js';
-import { taskArr } from './src/modules/local';
+import { taskArr } from './src/modules/local.js';
 
 describe('Add and Remove data', () => {
   const before = taskArr.length;

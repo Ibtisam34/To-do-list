@@ -1,8 +1,6 @@
 import { taskArr } from './local.js';
 
 const deleteTask = (task, element) => {
-  console.log(task);
-  console.log('Element', element);
   const taskName = task.children[0].children[1].value;
   // const tasks = JSON.parse(localStorage.getItem('tasks'));
   const tasks = taskArr;
