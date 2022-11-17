@@ -1,5 +1,6 @@
 const updateTaskStatus = require('./modules/task.js');
 
+// eslint-disable-next-line no-unused-vars
 jest.mock('./modules/task.js', () => (el, task) => el);
 
 test('Update a task after a click', () => {

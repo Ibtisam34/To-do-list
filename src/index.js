@@ -16,7 +16,6 @@ lists.addEventListener('click', (e) => {
   }
 
   if (e.target.classList.contains('edit')) {
-    console.log(task);
     editTask(task);
   }
   if (e.target.classList.contains('checkbox')) {
