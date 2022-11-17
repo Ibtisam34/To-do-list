@@ -3,8 +3,9 @@ import './styles/style.css';
 import updateTaskStatus from './modules/task.js';
 import editTask from './modules/edit.js';
 import {
-  displayTask, addTask, deleteTask, lists,
+  displayTask, loadList, deleteTask, lists,
 } from './modules/all.js';
+import { setItem } from './modules/local';
 
 const form = document.getElementById('add-to-list');
 const btnClear = document.querySelector('.btn-clear');
@@ -16,7 +17,8 @@ lists.addEventListener('click', (e) => {
   }
 
   if (e.target.classList.contains('edit')) {
-    editTask(task);
+    const res = editTask(task);
+    setItem(res);
   }
   if (e.target.classList.contains('checkbox')) {
     const tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -41,6 +43,7 @@ btnClear.addEventListener('click', () => {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const task = document.getElementById('task');
-  addTask(task.value);
+  // addTask(task.value);
+  loadList(task.value);
   task.value = '';
 });

@@ -1,4 +1,5 @@
-import { taskArr, lists } from './all.js';
+import { setItem, taskArr } from './local.js';
+import { lists, displayTask } from './all.js';
 
 // adding taks
 const addTask = (task) => {
@@ -6,16 +7,24 @@ const addTask = (task) => {
   taskObj.index = taskArr.length + 1;
   taskObj.description = task;
   taskObj.completed = false;
-  taskArr.push(taskObj);
-  localStorage.setItem('tasks', JSON.stringify(taskArr));
+  if (taskObj !== null) { taskArr.push(taskObj); }
+  // localStorage.setItem('tasks', JSON.stringify(taskArr));
+  // setItem(taskArr);
   return taskArr;
 };
 
-const loadList = () => {
-  addTask().then((newList) => {
-    lists.insertAdjacentHTML('beforeend', newList);
-    return newList;
-  });
+const loadList = (value) => {
+  const updatedList = addTask(value);
+  setItem(updatedList);
+  if (updatedList) {
+    lists.innerHTML = '';
+    const tasks = JSON.parse(localStorage.getItem('tasks'));
+    tasks.forEach((task) => {
+      const listItem = displayTask(task);
+      lists.insertAdjacentHTML('beforeend', listItem);
+    });
+  }
+//  lists.innerHTML = updatedList;
 };
 
 export {
