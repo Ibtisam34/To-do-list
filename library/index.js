@@ -2,7 +2,6 @@
 import './src/styles/style.css';
 
 import updateTaskStatus from './modules/task.js';
-import editTask from '../src/modules/edit.js';
 import {
   displayTask, addTask, deleteTask, lists,
 } from './modules/all.js';
