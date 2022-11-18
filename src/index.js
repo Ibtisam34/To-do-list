@@ -2,6 +2,7 @@ import './styles/style.css';
 
 import updateTaskStatus from './modules/task.js';
 import editTask from './modules/edit.js';
+import clearAll from './modules/clearAll.js';
 import {
   displayTask, loadList, deleteTask, lists,
 } from './modules/all.js';
@@ -17,7 +18,9 @@ lists.addEventListener('click', (e) => {
   }
 
   if (e.target.classList.contains('edit')) {
-    const res = editTask(task);
+    const taskItem = task.children[0].children[1].name;
+    const taskName = task.querySelector('#task-name').value;
+    const res = editTask(taskItem, taskName);
     setItem(res);
   }
   if (e.target.classList.contains('checkbox')) {
@@ -28,10 +31,7 @@ lists.addEventListener('click', (e) => {
 
 btnClear.addEventListener('click', () => {
   const tasks = JSON.parse(localStorage.getItem('tasks'));
-  const filterTasks = tasks.filter((task) => task.completed === false);
-  filterTasks.forEach((item, ind) => {
-    item.index = ind + 1;
-  });
+  const filterTasks = clearAll(tasks);
   let updatedList = '';
   filterTasks.forEach((task) => {
     updatedList += displayTask(task);

@@ -1,7 +1,8 @@
-let tasks = {};
+const tasks = [];
 
 const setItem = (task) => {
-  tasks = task;
+  tasks.push(task);
+  return tasks;
 };
 
 const getItem = () => tasks;

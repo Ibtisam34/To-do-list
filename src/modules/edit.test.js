@@ -1,32 +1,29 @@
-// import { addTask } from './all.js';
-import { getItem, setItem } from '../__mocks__/localStorage.js';
-import editTask from './edit.js';
-
-jest.mock('../__mocks__/addTask.js');
-jest.mock('../__mocks__/localStorage.js');
-
-const addTask = require('../__mocks__/addTask.js');
-
 /**
  * @jest-environment jsdom
  */
+// import { addTask } from './all.js';
+import { getItem } from '../__mocks__/localStorage.js';
+import editTask from './edit.js';
+
+jest.mock('../__mocks__/addTask.js');
+const addTask = require('../__mocks__/addTask.js');
 
 describe('Should check if a task value is modified', () => {
   test('should modify  task description', () => {
-    const newTask = addTask({
+    addTask({
       index: 1,
       description: 'Read book',
       completed: false,
     });
-    setItem(newTask);
-    const updatedTask = editTask({
-      index: 1,
-      description: 'Attend Meeting',
-      completed: true,
-    });
-    setItem(updatedTask);
 
-    expect(updatedTask).toBe(getItem());
+    const updatedTask = editTask('Read Book', 'Read Books');
+    addTask({
+      index: updatedTask.index + 1,
+      description: updatedTask.description,
+      completed: false,
+    });
+
+    expect(getItem()).toBeTruthy();
   });
 });
 
