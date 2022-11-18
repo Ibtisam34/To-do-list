@@ -11,6 +11,24 @@ describe('Should if the status is toggling: ', () => {
         description: 'Read book',
         completed: true,
       });
-    }).toBeTruthy();
+      expect(task).toHaveLength(1);
   });
-});
+  });
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

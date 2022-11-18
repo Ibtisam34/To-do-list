@@ -1,6 +1,9 @@
- # live demo
+# Testing to-do-list
+
+# live demo
  [live](https://ibtisam34.github.io/To-do-list/)
-# to-do-list
+
+To do tasks APP A simple app to keep track of daily activities. You can add or remove tasks, label completed tasks and slide items up or down to prioritize their order. You have the option to designate all jobs as completed at once.
 
 
 Template for to-do-list setup

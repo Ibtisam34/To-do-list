@@ -10,21 +10,18 @@ const addTask = require('../__mocks__/addTask.js');
 
 describe('Should check if a task value is modified', () => {
   test('should modify  task description', () => {
-    addTask({
-      index: 1,
-      description: 'Read book',
-      completed: false,
-    });
+    // addTask({
+    //   index: 1,
+    //   description: 'Read book',
+    //   completed: false,
+    // });
 
     const updatedTask = editTask('Read Book', 'Read Books');
-    addTask({
-      index: updatedTask.index + 1,
-      description: updatedTask.description,
-      completed: false,
-    });
-
-    expect(getItem()).toBeTruthy();
+    // addTask({
+    //   index: updatedTask.index + 1,
+    //   description: updatedTask.description,
+    //   completed: false,
+    // });
+     expect(updatedTask).toHaveLength(1);
   });
-});
-
-module.exports = editTask;
+})
