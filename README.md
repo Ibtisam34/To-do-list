@@ -31,7 +31,7 @@ Navigate to the folder
 👤 Riyana
 
 - GitHub: [ibtisam34](https://github.com/ibtisam34)
-
+- GitHub: [akos29](https://github.com/akos29)
 - LinkedIn: [LinkedIn](linkedin.com/in/riyangwl2)
 
 ## 🤝 Contributing
