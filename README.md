@@ -3,15 +3,26 @@
 # to-do-list
 
 
-In this project, I built a simple HTML list of To-Do tasks. I  built it using HTML, CSS, JavaScript, and webpack and served it by a webpack dev server.
+Template for to-do-list setup
 
-## Built With
+🗼Built With
+HTML
+Javascript
+GitHub Actions
+Webpack
+✈️ Launch
+Getting Started
+⚠️⚠️ Note the commands for running the server⚠️⚠️
+npm run start
 
-html, css & javascript
+Setting up this project locally
+How should it be tested
+Clone the repository
 
-To get a local copy up and running follow these simple example steps.
-Clone the repo named "to-do-list"
-run npm start to go live
+ git clone https://github.com/Ibtisam34/To-do-list.git
+Navigate to the folder
+
+🎉Congratulations you're done✨
 
 
 ## Authors
