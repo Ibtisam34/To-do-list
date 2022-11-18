@@ -1,8 +1,9 @@
 import deleteTask from './remove.js';
 
-const { addTask, loadList } = require('./TaskCRUD.js');
+const { loadList } = require('./TaskCRUD.js');
+const { taskArr } = require('./local.js');
 
-const taskArr = [];
+// const taskArr = JSON.parse(localStorage.getItem('tasks')) || [];
 const lists = document.getElementById('to-do-list');
 
 // display task
@@ -40,5 +41,5 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 export {
-  lists, taskArr, displayTask, loadList, addTask, deleteTask,
+  lists, taskArr, displayTask, loadList, deleteTask,
 };

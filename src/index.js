@@ -1,21 +1,15 @@
 import './styles/style.css';
 
-import updateTaskStatus from './modules/task.js';
+import { updateTaskStatus } from './modules/task.js';
+import editTask from './modules/edit.js';
+import clearAll from './modules/clearAll.js';
 import {
-  displayTask, addTask, deleteTask, lists,
+  displayTask, loadList, deleteTask, lists,
 } from './modules/all.js';
+import { setItem } from './modules/local.js';
 
 const form = document.getElementById('add-to-list');
 const btnClear = document.querySelector('.btn-clear');
-
-const editTask = (task) => {
-  const tasks = JSON.parse(localStorage.getItem('tasks'));
-  const taskItem = task.children[0].children[1].name;
-  const taskIndex = tasks.findIndex((x) => x.description === taskItem);
-  const taskName = task.querySelector('#task-name').value;
-  tasks[taskIndex].description = taskName;
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-};
 
 lists.addEventListener('click', (e) => {
   const task = e.target.parentElement.parentElement;
@@ -24,7 +18,10 @@ lists.addEventListener('click', (e) => {
   }
 
   if (e.target.classList.contains('edit')) {
-    editTask(task);
+    const taskItem = task.children[0].children[1].name;
+    const taskName = task.querySelector('#task-name').value;
+    const res = editTask(taskItem, taskName);
+    setItem(res);
   }
   if (e.target.classList.contains('checkbox')) {
     const tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -34,10 +31,7 @@ lists.addEventListener('click', (e) => {
 
 btnClear.addEventListener('click', () => {
   const tasks = JSON.parse(localStorage.getItem('tasks'));
-  const filterTasks = tasks.filter((task) => task.completed === false);
-  filterTasks.forEach((item, ind) => {
-    item.index = ind + 1;
-  });
+  const filterTasks = clearAll(tasks);
   let updatedList = '';
   filterTasks.forEach((task) => {
     updatedList += displayTask(task);
@@ -49,6 +43,7 @@ btnClear.addEventListener('click', () => {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const task = document.getElementById('task');
-  addTask(task.value);
+  // addTask(task.value);
+  loadList(task.value);
   task.value = '';
 });

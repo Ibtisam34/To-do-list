@@ -1,17 +1,32 @@
- # live demo
+# Testing to-do-list
+
+# live demo
  [live](https://ibtisam34.github.io/To-do-list/)
-# to-do-list
+
+To do tasks APP A simple app to keep track of daily activities. You can add or remove tasks, label completed tasks and slide items up or down to prioritize their order. You have the option to designate all jobs as completed at once.
 
 
-In this project, I built a simple HTML list of To-Do tasks. I  built it using HTML, CSS, JavaScript, and webpack and served it by a webpack dev server.
+Template for to-do-list setup
 
-## Built With
+🗼Built With
+HTML
+JavaScript
+css
+GitHub Actions
+Webpack
+✈️ Launch
+Getting Started
+⚠️⚠️ Note the commands for running the server⚠️⚠️
+npm run start
 
-html, css & javascript
+Setting up this project locally
+How should it be tested
+Clone the repository
 
-To get a local copy up and running follow these simple example steps.
-Clone the repo named "to-do-list"
-run npm start to go live
+ git clone https://github.com/Ibtisam34/To-do-list.git
+Navigate to the folder
+
+🎉Congratulations you're done✨
 
 
 ## Authors
@@ -19,7 +34,7 @@ run npm start to go live
 👤 Riyana
 
 - GitHub: [ibtisam34](https://github.com/ibtisam34)
-
+- GitHub: [akos29](https://github.com/akos29)
 - LinkedIn: [LinkedIn](linkedin.com/in/riyangwl2)
 
 ## 🤝 Contributing
