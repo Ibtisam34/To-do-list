@@ -11,4 +11,10 @@ const updateTaskStatus = (el, tasks) => {
   return true;
 };
 
-export default updateTaskStatus;
+const updateStatus = (task) => {
+  // eslint-disable-next-line no-unused-expressions
+  task.completed ? task.completed = true : task.completed = false;
+  return task;
+};
+
+export { updateTaskStatus, updateStatus };

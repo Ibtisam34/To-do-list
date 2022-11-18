@@ -1,6 +1,6 @@
 import './styles/style.css';
 
-import updateTaskStatus from './modules/task.js';
+import { updateTaskStatus } from './modules/task.js';
 import editTask from './modules/edit.js';
 import clearAll from './modules/clearAll.js';
 import {
