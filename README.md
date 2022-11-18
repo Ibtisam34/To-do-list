@@ -7,7 +7,8 @@ Template for to-do-list setup
 
 🗼Built With
 HTML
-Javascript
+JavaScript
+css
 GitHub Actions
 Webpack
 ✈️ Launch
